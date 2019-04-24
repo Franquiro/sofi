@@ -1,0 +1,52 @@
+<head>
+  <title>paginaSofi</title>
+</head>
+
+<body>
+  <h1>Dashboard</h1>
+  {{>navegacion}}
+  <div class="container-fluid">{{>graficos}}</div>
+  <footer>
+      <p class="bg-info text-muted text-center">Desarrollado por Francisco Quiroga y Medus 2019</p>
+  </footer>
+
+</body>
+
+<template name="navegacion">
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </nav>
+</template>
+<template name="graficos">
+    {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
+  <!--div class="row">
+    {{#each grafico}}
+    <div class="col-lg-4 col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center"></h2>
+            </div>
+            <div class="card-body">
+                
+            </div>
+            <div class="card-footer">
+                <p>Descripcion del proyecto</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+  </div-->
+</template>
